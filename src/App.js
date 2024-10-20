@@ -1,25 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { Wrapper, Card, QRImage, CardContent, Title, Text } from './styled-components';
+import QRCodeImage from './image-qr-code.png';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const App = () => {
+    return (
+        <Wrapper>
+            <Card>
+                <QRImage src={QRCodeImage} alt="QR Code" />
+                <CardContent>
+                    <Title>Improve your front-end skills by building projects</Title>
+                    <Text>
+                        Scan the QR code to visit Frontend Mentor and take your coding skills to the next level.
+                    </Text>
+                </CardContent>
+            </Card>
+        </Wrapper>
+    );
+};
 
 export default App;
